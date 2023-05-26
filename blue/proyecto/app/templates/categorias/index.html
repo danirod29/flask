@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+
+{% block content %}
+
+<figure class="text-center">
+    <h1 class="title">
+        {%block title%}
+            categorias
+        {% endblock %}
+    </h1>
+</figure>
+<div>
+    <h2> Cantidad de post por usuario</h2>
+    {%for usuario in usuarios%}
+        <article>
+            <h3>Usuario: {{usuario.id}}, Cantidad: {{usuario.cantidad}}</h3>
+        </article>    
+    {%endfor%}
+</div>
+
+{% endblock %}

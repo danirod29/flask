@@ -1,0 +1,22 @@
+{%extends "base.html"%}
+
+{% block content %}
+<figure class="text-center">
+    <h1 class="title">
+        {%block title%}
+            Posts
+        {% endblock %}
+    </h1>
+</figure>
+<div>
+    <h3>Lista de posts por titulo</h3>
+    {%for post in posts%} 
+        <article>
+            <a href="/post/{{post.id}}">
+                <h4>{{post.title}}</h4>
+            </a>
+        </article>
+    {%endfor%}
+</div>
+
+{% endblock %}

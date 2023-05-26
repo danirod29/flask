@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+
+{% block content %}
+<figure class="text-center">
+    <h1 class="title">
+        {%block title%}
+            Detalles de: <small class="text-body-secondary">{{post.title}}</small>
+        {% endblock %}
+    </h1>
+    <div>
+        <article>
+            <h2>ID: <small class="text-body-secondary">{{id}}</small></h2>
+            <h3>Cuerpo: <small class="text-body-secondary">{{post.body}}</small></h3>
+        </article>
+    </div>
+</figure>
+
+{% endblock %}
